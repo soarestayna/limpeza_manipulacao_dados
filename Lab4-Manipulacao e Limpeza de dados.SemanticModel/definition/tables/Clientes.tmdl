@@ -1,0 +1,138 @@
+table Clientes
+	lineageTag: 1d91e4a7-827a-4567-869d-c920561664be
+
+	measure MedianaAltura = MEDIAN(Clientes[Altura])
+		lineageTag: ea7ea69f-f74d-4981-9b22-3609fe649efd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Q1Altura = PERCENTILE.INC(Clientes[Altura], 0.25)
+		lineageTag: 883c16a8-d253-45b5-bfe8-57b89c7cd9ba
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Q3Altura = PERCENTILE.INC(Clientes[Altura], 0.75)
+		lineageTag: 45606a0c-0d8d-4c93-aa6f-899a51d5ed46
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure IQRAltura = [Q3Altura] - [Q1Altura]
+		lineageTag: 17997c77-d5f9-4d70-b850-cdca1c8d61e3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure LimiteInferiorAltura = [Q1Altura] - 1.5 * [IQRAltura]
+		lineageTag: 664a284c-97ae-4c10-b93d-f05d1d3f4e81
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure LimiteSuperiorAltura = [Q3Altura] + 1.5 * [IQRAltura]
+		lineageTag: f6a8c353-1883-4b27-9657-91bb7a8417a4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ID_Cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 5efad0b1-de96-4a1f-8703-aec2ab7a2013
+		summarizeBy: sum
+		sourceColumn: ID_Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: double
+		formatString: 0
+		lineageTag: 8c2e2629-34a6-4738-9970-9f6aa89a9d68
+		summarizeBy: sum
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Peso
+		dataType: double
+		formatString: 0
+		lineageTag: e3722df8-f069-4b00-8a85-f08bccee6fe7
+		summarizeBy: sum
+		sourceColumn: Peso
+
+		annotation SummarizationSetBy = Automatic
+
+	column Altura
+		dataType: double
+		formatString: 0
+		lineageTag: ea1e2d90-f2f8-4e7c-a2ee-9f588b4938d5
+		summarizeBy: sum
+		sourceColumn: Altura
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estado Civil'
+		dataType: string
+		lineageTag: d68e0394-b844-4f66-9c15-f58ce9d5d9fe
+		summarizeBy: none
+		sourceColumn: Estado Civil
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: 77a49914-86b8-415f-8f98-85d92b7de1c8
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: e19c0407-fe62-4377-b590-c2e83bcdb374
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Limite de Crédito'
+		dataType: int64
+		formatString: 0
+		lineageTag: d71d7227-ac52-46e2-b450-77fff07eba6e
+		summarizeBy: sum
+		sourceColumn: Limite de Crédito
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Taxa de Desconto'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d6c8689-d2fd-4a32-b7cd-a979a84b0402
+		summarizeBy: sum
+		sourceColumn: Taxa de Desconto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo de Cliente'
+		dataType: string
+		lineageTag: ebb2d8b8-e234-4b5a-a412-548f30eea0aa
+		summarizeBy: none
+		sourceColumn: Tipo de Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clientes = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\LEAO\OneDrive\Documentos\DSA - Data Science Academy\Cap12\Clientes\Clientes.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_Cliente", Int64.Type}, {"Idade", Int64.Type}, {"Peso", Int64.Type}, {"Altura", Int64.Type}, {"Estado Civil", type text}, {"Cidade", type text}, {"Estado", type text}, {"Limite de Crédito", Int64.Type}, {"Taxa de Desconto", Int64.Type}, {"Tipo de Cliente", type text}}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Tipo Alterado", {"ID_Cliente"}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Duplicatas Removidas",null,40,Replacer.ReplaceValue,{"Idade"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído",null,70,Replacer.ReplaceValue,{"Peso"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1",278,172,Replacer.ReplaceValue,{"Altura"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2",270,172,Replacer.ReplaceValue,{"Altura"})
+				in
+				    #"Valor Substituído3"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

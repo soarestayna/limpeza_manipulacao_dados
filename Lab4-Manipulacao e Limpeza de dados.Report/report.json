@@ -1,0 +1,84 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"},\"type\":2},\"customTheme\":{\"name\":\"Solar\",\"version\":{\"visual\":\"2.1.0\",\"report\":\"2.1.0\",\"page\":\"2.0.0\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          },
+          {
+            "name": "Solar",
+            "path": "BuiltInThemes/Solar.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "b6e1c654de2c2dece9a3",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"242ad7502963550a0221\",\"layouts\":[{\"id\":0,\"position\":{\"x\":308.67742049822067,\"y\":205.0752688172043,\"z\":1000,\"width\":951.0537634408602,\"height\":74.3225806451613,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Clientes.Altura)\"},{\"queryRef\":\"Avg(Clientes.Altura)\"},{\"queryRef\":\"StandardDeviation(Clientes.Altura)\"},{\"queryRef\":\"Sum(Clientes.Altura)1\"},{\"queryRef\":\"Sum(Clientes.Altura)2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Clientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"}},\"Function\":3},\"Name\":\"Sum(Clientes.Altura)\",\"NativeReferenceName\":\"Mínimo de Altura\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"}},\"Function\":1},\"Name\":\"Avg(Clientes.Altura)\",\"NativeReferenceName\":\"Média de Altura\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"}},\"Function\":4},\"Name\":\"Sum(Clientes.Altura)1\",\"NativeReferenceName\":\"Máximo de Altura\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"}},\"Function\":7},\"Name\":\"StandardDeviation(Clientes.Altura)\",\"NativeReferenceName\":\"Desvio padrão de Altura\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"}},\"Function\":6},\"Name\":\"Sum(Clientes.Altura)2\",\"NativeReferenceName\":\"Mediana de Altura\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"180.14573708296066D\"}}}},\"selector\":{\"metadata\":\"Sum(Clientes.Altura)\"}},{\"properties\":{},\"selector\":{\"metadata\":\"Avg(Clientes.Altura)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"230.877301990024D\"}}}},\"selector\":{\"metadata\":\"StandardDeviation(Clientes.Altura)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"184.5153192139339D\"}}}},\"selector\":{\"metadata\":\"Sum(Clientes.Altura)1\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"187.73695383931513D\"}}}},\"selector\":{\"metadata\":\"Sum(Clientes.Altura)2\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 74.32,
+          "width": 951.05,
+          "x": 308.68,
+          "y": 205.08,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"2fd980ddb3a0e61ed009\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.634408602150538,\"y\":13.763440860215054,\"z\":3001,\"width\":276.64516129032256,\"height\":172.04301075268816,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Lab 4 \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"DIN Light\",\"fontSize\":\"28pt\",\"color\":\"#333333\"}},{\"value\":\" \",\"textStyle\":{\"fontFamily\":\"DIN Light\",\"fontSize\":\"28pt\",\"color\":\"#333333\"}}]},{\"textRuns\":[{\"value\":\"Limpeza e Manipulação \",\"textStyle\":{\"fontFamily\":\"DIN Light\",\"fontSize\":\"28pt\",\"color\":\"#333333\"}}]},{\"textRuns\":[{\"value\":\"de dados.\",\"textStyle\":{\"fontFamily\":\"DIN Light\",\"fontSize\":\"28pt\",\"color\":\"#333333\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 172.04,
+          "width": 276.65,
+          "x": 9.63,
+          "y": 13.76,
+          "z": 3001.00
+        },
+        {
+          "config": "{\"name\":\"545d55c1d049c500800d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":301.4193548387097,\"z\":0,\"width\":1280,\"height\":418.40860215053766,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Sum(Clientes.ID_Cliente)\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Clientes.Altura)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Clientes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"ID_Cliente\"},\"Name\":\"Sum(Clientes.ID_Cliente)\",\"NativeReferenceName\":\"Cliente\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Altura\"},\"Name\":\"Sum(Clientes.Altura)\",\"NativeReferenceName\":\"Altura\"}]},\"columnProperties\":{\"Sum(Clientes.ID_Cliente)\":{\"displayName\":\"Cliente\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"y1AxisReferenceLine\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Mediana'\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}},\"value\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Clientes\"}},\"Property\":\"MedianaAltura\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}},\"selector\":{\"id\":\"1\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Q1'\"}}},\"value\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Clientes\"}},\"Property\":\"Q1Altura\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}},\"selector\":{\"id\":\"2\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Q3'\"}}},\"value\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Clientes\"}},\"Property\":\"Q3Altura\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}},\"selector\":{\"id\":\"3\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Limite Superior'\"}}},\"value\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Clientes\"}},\"Property\":\"LimiteSuperiorAltura\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}},\"selector\":{\"id\":\"4\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Limite Inferior'\"}}},\"value\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Clientes\"}},\"Property\":\"LimiteInferiorAltura\"}}},\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}},\"selector\":{\"id\":\"5\"}}],\"plotAreaShading\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"displayName\":{\"expr\":{\"Literal\":{\"Value\":\"'Sombreamento de simetria 1'\"}}},\"upperShadingColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0.6}}}}},\"lowerShadingColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0.6}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Informações sobre Cliente e Altura'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 418.41,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 301.42,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"84a7c5315c320d4be972\",\"layouts\":[{\"id\":0,\"position\":{\"x\":308.67742049822067,\"y\":13.763440860215054,\"z\":3000,\"width\":951.0537634408602,\"height\":79.82795698924731,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Clientes.Peso)\"},{\"queryRef\":\"Avg(Clientes.Peso)\"},{\"queryRef\":\"StandardDeviation(Clientes.Peso)\"},{\"queryRef\":\"Max(Clientes.Peso)\"},{\"queryRef\":\"Sum(Clientes.Peso)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Clientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Peso\"}},\"Function\":6},\"Name\":\"Sum(Clientes.Peso)\",\"NativeReferenceName\":\"Mediana de Peso\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Peso\"}},\"Function\":3},\"Name\":\"Min(Clientes.Peso)\",\"NativeReferenceName\":\"Mínimo de Peso\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Peso\"}},\"Function\":1},\"Name\":\"Avg(Clientes.Peso)\",\"NativeReferenceName\":\"Média de Peso\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Peso\"}},\"Function\":7},\"Name\":\"StandardDeviation(Clientes.Peso)\",\"NativeReferenceName\":\"Desvio padrão de Peso\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Peso\"}},\"Function\":4},\"Name\":\"Max(Clientes.Peso)\",\"NativeReferenceName\":\"Máximo de Peso\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Peso\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"173.6451612903226D\"}}}},\"selector\":{\"metadata\":\"Min(Clientes.Peso)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"165.7741935483871D\"}}}},\"selector\":{\"metadata\":\"Avg(Clientes.Peso)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"235.3978494623656D\"}}}},\"selector\":{\"metadata\":\"StandardDeviation(Clientes.Peso)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"172.51612903225805D\"}}}},\"selector\":{\"metadata\":\"Max(Clientes.Peso)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"189.54111598703176D\"}}}},\"selector\":{\"metadata\":\"Sum(Clientes.Peso)\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.83,
+          "width": 951.05,
+          "x": 308.68,
+          "y": 13.76,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d5638adb916625385006\",\"layouts\":[{\"id\":0,\"position\":{\"x\":308.67742049822067,\"y\":111.48387096774194,\"z\":2000,\"width\":951.0537634408602,\"height\":74.3225806451613,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Clientes.Idade)\"},{\"queryRef\":\"Avg(Clientes.Idade)\"},{\"queryRef\":\"StandardDeviation(Clientes.Idade)\"},{\"queryRef\":\"Max(Clientes.Idade)\"},{\"queryRef\":\"Sum(Clientes.Idade)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Clientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Idade\"}},\"Function\":6},\"Name\":\"Sum(Clientes.Idade)\",\"NativeReferenceName\":\"Mediana de Idade\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Idade\"}},\"Function\":3},\"Name\":\"Min(Clientes.Idade)\",\"NativeReferenceName\":\"Mínimo de Idade\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Idade\"}},\"Function\":1},\"Name\":\"Avg(Clientes.Idade)\",\"NativeReferenceName\":\"Média de Idade\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Idade\"}},\"Function\":7},\"Name\":\"StandardDeviation(Clientes.Idade)\",\"NativeReferenceName\":\"Desvio padrão de Idade\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Idade\"}},\"Function\":4},\"Name\":\"Max(Clientes.Idade)\",\"NativeReferenceName\":\"Máximo de Idade\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"179.89247311827955D\"}}}},\"selector\":{\"metadata\":\"Min(Clientes.Idade)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"165.51612903225805D\"}}}},\"selector\":{\"metadata\":\"Avg(Clientes.Idade)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"223.76816927852744D\"}}}},\"selector\":{\"metadata\":\"StandardDeviation(Clientes.Idade)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"177.38709677419354D\"}}}},\"selector\":{\"metadata\":\"Max(Clientes.Idade)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"185.13978494623655D\"}}}},\"selector\":{\"metadata\":\"Sum(Clientes.Idade)\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 74.32,
+          "width": 951.05,
+          "x": 308.68,
+          "y": 111.48,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Solar"
+}

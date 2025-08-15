@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Lab4-Manipulacao e Limpeza de dados"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e9e910d7-2a6e-464a-9c52-ae9f60c9e9c5"
+  }
+}
